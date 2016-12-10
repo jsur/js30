@@ -6,5 +6,5 @@ Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
 
 Checklist for done videos:
 
-01 - Done
-02 - 
+01 - Done  
+02 - Done  
