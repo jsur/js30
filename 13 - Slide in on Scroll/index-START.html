@@ -62,14 +62,12 @@
 
     function checkSlide(e) {
       sliderImages.forEach(sliderImage => {
-        // half way through the image
-        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-        // bottom of the image
-        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2; //Gives the pixel level of where the bottom of the viewport currently is, minus 50% of the image's height. That's the point where the image should be slid in.
+        const imageBottom = sliderImage.offsetTop + sliderImage.height; //Bottom of the image
         const isHalfShown = slideInAt > sliderImage.offsetTop;
         const isNotScrolledPast = window.scrollY < imageBottom;
         if (isHalfShown && isNotScrolledPast) {
-          sliderImage.classList.add('active');
+          sliderImage.classList.add('active'); 
         } else {
           sliderImage.classList.remove('active');
         }
